@@ -17,18 +17,19 @@
 
         <TextView
             android:id="@+id/userNameTxt"
-            android:layout_marginRight="10dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:text="Name"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@id/editBtn"
+            app:layout_constraintEnd_toStartOf="@id/updateBtn"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/userEmailTxt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -36,7 +37,6 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:id="@+id/userEmailTxt"
             app:layout_constraintEnd_toEndOf="@+id/userNameTxt"
             app:layout_constraintStart_toStartOf="@+id/userNameTxt"
             app:layout_constraintTop_toBottomOf="@+id/userNameTxt" />
@@ -81,7 +81,7 @@
             app:layout_constraintTop_toBottomOf="@+id/DistrictTxt" />
 
         <ImageButton
-            android:id="@+id/editBtn"
+            android:id="@+id/updateBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:backgroundTint="@color/white"
@@ -99,8 +99,8 @@
             android:src="@drawable/delete"
             app:layout_constraintBottom_toBottomOf="@+id/MobileTxt"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/editBtn"
-            app:layout_constraintTop_toBottomOf="@+id/editBtn" />
+            app:layout_constraintStart_toStartOf="@+id/updateBtn"
+            app:layout_constraintTop_toBottomOf="@+id/updateBtn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

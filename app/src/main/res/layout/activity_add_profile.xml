@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/EmailEt"
+        android:id="@+id/emailEt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -52,9 +52,9 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/EmailEt"
-        app:layout_constraintStart_toStartOf="@id/EmailEt"
-        app:layout_constraintTop_toBottomOf="@id/EmailEt"
+        app:layout_constraintEnd_toEndOf="@id/emailEt"
+        app:layout_constraintStart_toStartOf="@id/emailEt"
+        app:layout_constraintTop_toBottomOf="@id/emailEt"
         app:layout_goneMarginTop="20dp" />
 
     <EditText
