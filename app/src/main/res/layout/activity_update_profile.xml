@@ -17,7 +17,7 @@
         android:padding="10dp">
 
         <EditText
-            android:id="@+id/profileNameEt"
+            android:id="@+id/NameEt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -38,9 +38,9 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/profileNameEt"
-            app:layout_constraintStart_toStartOf="@id/profileNameEt"
-            app:layout_constraintTop_toBottomOf="@id/profileNameEt"
+            app:layout_constraintEnd_toEndOf="@id/NameEt"
+            app:layout_constraintStart_toStartOf="@id/NameEt"
+            app:layout_constraintTop_toBottomOf="@id/NameEt"
             app:layout_goneMarginTop="20dp" />
 
         <EditText
@@ -86,7 +86,7 @@
             app:layout_goneMarginTop="20dp" />
 
         <Button
-            android:id="@+id/addBtn"
+            android:id="@+id/updateBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="88dp"
