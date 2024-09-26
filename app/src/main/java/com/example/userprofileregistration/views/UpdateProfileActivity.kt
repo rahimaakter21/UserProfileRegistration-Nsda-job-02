@@ -1,5 +1,6 @@
 package com.example.userprofileregistration.views
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -10,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.userprofileregistration.Models.UserProfile
 import com.example.userprofileregistration.R
 import com.example.userprofileregistration.viewModel.UserProfileViewModel
+import java.util.Calendar
 
 class UpdateProfileActivity : AppCompatActivity() {
     private lateinit var userProfile: UserProfile
@@ -33,6 +35,10 @@ class UpdateProfileActivity : AppCompatActivity() {
         NameEt = findViewById(R.id.NameEt)
         emailEt = findViewById(R.id.emailEt)
         dobEt = findViewById(R.id.dobEt)
+        dobEt.setOnClickListener{
+            showDatePickerDialog()
+        }
+
         districtEt = findViewById(R.id.districtEt)
         mobileEt = findViewById(R.id.mobileEt)
 
@@ -43,7 +49,21 @@ class UpdateProfileActivity : AppCompatActivity() {
             updateUserProfile()
         }
     }
-        private fun populateFields() {
+
+    private fun showDatePickerDialog() {
+        val calendar = Calendar.getInstance()
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+        val datePickerDialog = DatePickerDialog(this, { _, selectedYear, selectedMonth, selectedDay ->
+            val date = "$selectedDay/${selectedMonth + 1}/$selectedYear"
+            dobEt.setText(date)
+        }, year, month, day)
+
+        datePickerDialog.show()
+    }
+
+    private fun populateFields() {
             NameEt.setText(userProfile.name)
             emailEt.setText(userProfile.email)
             dobEt.setText(userProfile.dob)
